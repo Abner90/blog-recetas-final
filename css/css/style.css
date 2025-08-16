@@ -1,0 +1,303 @@
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #FFF8ED;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado con imagen de fondo - RUTA CORRECTA */
+.encabezado-fondo {
+    background: linear-gradient(rgba(211, 84, 0, 0.2), rgba(243, 156, 18, 0.2)), 
+                url('../img/encabezado.jpg') center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    filter: brightness(1.2) contrast(1.1) saturate(1.3);
+}
+
+.encabezado-fondo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+    font-weight: 700;
+}
+
+.encabezado-fondo p {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navegación */
+.navegacion {
+    background: linear-gradient(45deg, #D35400, #F39C12);
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid transparent;
+}
+
+.navegacion a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sección principal */
+.seccion-principal {
+    padding: 4rem 0;
+    background-color: #FFF8ED;
+}
+
+.seccion-principal h2 {
+    text-align: center;
+    color: #F39C12;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.seccion-principal .descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.8;
+}
+
+/* Grid de recetas */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-receta {
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.tarjeta-receta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Imagen con etiqueta en la esquina */
+.imagen-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.tarjeta-receta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-receta:hover img {
+    transform: scale(1.1);
+}
+
+/* Etiqueta en la esquina superior derecha */
+.etiqueta-categoria {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #F39C12, #D35400);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Contenido de la tarjeta */
+.contenido-tarjeta {
+    padding: 2rem;
+}
+
+.contenido-tarjeta h3 {
+    color: #F39C12;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contenido-tarjeta .descripcion {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* Información adicional - ICONOS CORREGIDOS */
+.info-receta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ICONOS CORREGIDOS - Usando emojis que sí funcionan */
+.info-item::before {
+    content: "⏱️";
+    font-size: 1rem;
+}
+
+.info-item.dificultad::before {
+    content: "👨‍🍳";
+}
+
+/* Botón leer receta */
+.boton-leer {
+    display: inline-block;
+    background: linear-gradient(45deg, #F39C12, #D35400);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.boton-leer:hover {
+    background: linear-gradient(45deg, #D35400, #F39C12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+}
+
+/* Pie de página */
+.pie-pagina {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.pie-pagina h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #F39C12;
+}
+
+.pie-pagina p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .encabezado-fondo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .encabezado-fondo p {
+        font-size: 1.1rem;
+    }
+    
+    .navegacion ul {
+        gap: 1rem;
+    }
+    
+    .navegacion a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .seccion-principal h2 {
+        font-size: 2.2rem;
+    }
+    
+    .grid-recetas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contenido-tarjeta {
+        padding: 1.5rem;
+    }
+    
+    .info-receta {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 15px;
+    }
+    
+    .encabezado-fondo {
+        min-height: 400px;
+    }
+    
+    .encabezado-fondo h1 {
+        font-size: 2rem;
+    }
+    
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
