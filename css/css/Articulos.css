@@ -1,10 +1,10 @@
  :root{
       --bg:#ed940f;
-      --ink:#1f2937;   /* gris oscuro */
-      --muted:#9ca3af; /* gris medio */
-      --panel:#e5e7eb; /* gris claro */
-      --panel-2:#d1d5db; /* gris más oscuro */
-      --accent:#c4c4c4; /* para botones */
+      --ink:#1f2937;   
+      --muted:#9ca3af; 
+      --panel:#e5e7eb; 
+      --panel-2:#d1d5db; 
+      --accent:#c4c4c4; 
       --radius:25px;
       --gap:25px;
       --shadow:0 px 18px rgba(0,0,0,.06);
